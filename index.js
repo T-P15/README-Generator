@@ -1,32 +1,34 @@
 const inquirer = require(`inquirer`);
 const fs = require('fs');
 
+
 const generateReadMe = ({ title, installation, usage, email, github, contributors, license }) =>
-    ` #${title}
 
-      *[installation](#installation)
-      *[usage](#usage)
-      *[contributors](#contributors)
-      *[license](#license)
-      *[contact](#contact)
+`# ${title}     
 
-      ##Installation
-      ${installation}
+*[installation](#installation)
+*[usage](#usage)
+*[contributors](#contributors)
+*[license](#license)
+*[contact](#contact)
 
-      ##Usage
-      ${usage}
+## Installation
+${installation}
 
-      ## Contributors
-      ${contributors}
+## Usage
+${usage}
 
-      ## license
-      ${license}
+## Contributors
+${contributors}
 
-      ## Contact
-      ${email}
-      ${github}
+## license
+${license}
 
-    `
+## Contact
+${email}
+${github}
+
+`
 
 inquirer.prompt([
         {
